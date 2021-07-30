@@ -1,0 +1,4 @@
+include ':motionevent'
+include ':flag'
+include ':aidl'
+rootProject.name = "AndroidStudy"

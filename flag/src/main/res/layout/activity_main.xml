@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/tv_adda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="addA"
+        android:text="tv_adda"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tv_addd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="addD"
+        android:text="tv_addd"
+        app:layout_constraintTop_toBottomOf="@id/tv_adda" />
+
+    <Button
+        android:id="@+id/tv_addf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="addF"
+        android:text="tv_addf"
+        app:layout_constraintTop_toBottomOf="@id/tv_addd" />
+
+    <Button
+        android:id="@+id/tv_removea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="removeA"
+        android:text="tv_removea"
+        app:layout_constraintTop_toBottomOf="@id/tv_addf" />
+
+    <Button
+        android:id="@+id/tv_removed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="removeD"
+        android:text="tv_removed"
+        app:layout_constraintTop_toBottomOf="@id/tv_removea" />
+
+    <Button
+        android:id="@+id/tv_removef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="removeF"
+        android:text="tv_removef"
+        app:layout_constraintTop_toBottomOf="@id/tv_removed" />
+
+    <Button
+        android:id="@+id/tv_containsa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="containsA"
+        android:text="tv_containsa"
+        app:layout_constraintTop_toBottomOf="@id/tv_removef" />
+
+    <Button
+        android:id="@+id/tv_containsd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="containsD"
+        android:text="tv_containsd"
+        app:layout_constraintTop_toBottomOf="@id/tv_containsa" />
+
+    <Button
+        android:id="@+id/tv_containsf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="containsF"
+        android:text="tv_containsf"
+        app:layout_constraintTop_toBottomOf="@id/tv_containsd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
