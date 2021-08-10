@@ -78,3 +78,49 @@
     .line 10
     return-void
 .end method
+
+.method public static printLong(J)V
+    .registers 6
+    .param p0, "a"    # J
+
+    .prologue
+    .line 13
+    const-string v0, "kbjay_test_decode"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 14
+    return-void
+.end method
+
+.method public static printString(Ljava/lang/String;)V
+    .registers 2
+    .param p0, "a"    # Ljava/lang/String;
+
+    .prologue
+    .line 17
+    const-string v0, "kbjay_test_decode"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 18
+    return-void
+.end method
