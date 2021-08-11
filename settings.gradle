@@ -1,3 +1,5 @@
+include ':viwepager2gallery'
+include ':view'
 include ':decompile'
 include ':nestedscroll'
 include ':motionevent'
