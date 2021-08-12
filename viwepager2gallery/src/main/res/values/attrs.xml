@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KJRollerView">
+        <attr name="pageScaleRate" format="float"/>
+        <attr name="centerPageIntervalToPage" format="dimension"/>
+        <attr name="centerPageMarginToParent" format="dimension"/>
+    </declare-styleable>
+</resources>
