@@ -7,14 +7,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="11111" />
-
+    <com.kbjay.fragment.view.GradientBorderAndTranslateContentView
+        android:layout_width="800px"
+        android:layout_height="800px"
+        app:borderStartColor="@color/color_268858"
+        app:borderEndColor="@color/color_35C479"
+        app:gradientWidth="10dp"
+        app:type="horizontal"
+        app:contentColor="@color/color_d46ec91"
+        />
 </LinearLayout>

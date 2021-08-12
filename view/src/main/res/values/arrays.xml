@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="gradientColors">
+        <item>@color/purple_500</item>
+        <item>@color/teal_200</item>
+    </integer-array>
+
+</resources>
