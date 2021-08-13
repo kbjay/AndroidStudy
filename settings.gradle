@@ -1,5 +1,5 @@
-include ':viwepager2gallery'
-include ':view'
+include ':kjScrollerView'
+include ':kjGradientBorderXparentContentView'
 include ':decompile'
 include ':nestedscroll'
 include ':motionevent'
