@@ -4,7 +4,7 @@
         <attr name="borderStartColor" format="color"/>
         <attr name="borderEndColor" format="color"/>
         <attr name="contentColor" format="color"/>
-        <attr name="corners" format="float"/>
+        <attr name="corners" format="dimension"/>
         <attr name="gradientWidth" format="dimension"/>
 
         <attr name="type">

@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.kbjay.fragment.view.GradientBorderAndTranslateContentView
-        android:layout_width="800px"
-        android:layout_height="800px"
-        app:borderStartColor="@color/color_268858"
+        android:layout_width="232dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="100dp"
         app:borderEndColor="@color/color_35C479"
-        app:gradientWidth="10dp"
-        app:type="horizontal"
+        app:borderStartColor="@color/color_268858"
         app:contentColor="@color/color_d46ec91"
-        />
+        app:corners="2dp"
+        app:gradientWidth="0.67dp"
+        app:type="horizontal" />
 </LinearLayout>

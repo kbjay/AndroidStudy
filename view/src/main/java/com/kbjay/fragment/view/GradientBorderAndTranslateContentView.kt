@@ -12,9 +12,10 @@ class GradientBorderAndTranslateContentView(context: Context, attributeSet: Attr
     private var borderStartColor: Int
     private var borderEndColor: Int
     private var contentColor: Int
-    private var corners: Float
+    private var corners: Int
     private var borderStrokeWidth: Int
-    private var paint: Paint
+    private var borderPaint: Paint
+    private var centerContentPaint: Paint
     private var type: Int = 2
 
     companion object {
@@ -41,7 +42,10 @@ class GradientBorderAndTranslateContentView(context: Context, attributeSet: Attr
                 R.styleable.GradientBorderAndTranslateContentView_borderEndColor,
                 -1
             )
-        corners = typedArray.getFloat(R.styleable.GradientBorderAndTranslateContentView_corners, 0f)
+        corners = typedArray.getDimensionPixelSize(
+            R.styleable.GradientBorderAndTranslateContentView_corners,
+            0
+        )
         borderStrokeWidth =
             typedArray.getDimensionPixelSize(
                 R.styleable.GradientBorderAndTranslateContentView_gradientWidth,
@@ -50,26 +54,28 @@ class GradientBorderAndTranslateContentView(context: Context, attributeSet: Attr
         type = typedArray.getInt(R.styleable.GradientBorderAndTranslateContentView_type, 0)
 
         typedArray.recycle()
-        paint = Paint(ANTI_ALIAS_FLAG)
-        paint.style = Paint.Style.STROKE
-        paint.strokeWidth = borderStrokeWidth.toFloat()
+        borderPaint = Paint(ANTI_ALIAS_FLAG)
+        borderPaint.style = Paint.Style.STROKE
+        borderPaint.strokeWidth = borderStrokeWidth.toFloat()
+        centerContentPaint = Paint(ANTI_ALIAS_FLAG)
+        centerContentPaint.color = contentColor
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         when (type) {
             TYPE_HORIZONTAL -> {
-                paint.shader = LinearGradient(
+                borderPaint.shader = LinearGradient(
                     0f, 0f, 0f, w.toFloat(), borderStartColor, borderEndColor, Shader.TileMode.CLAMP
                 )
             }
             TYPE_VERTICAL -> {
-                paint.shader = LinearGradient(
+                borderPaint.shader = LinearGradient(
                     0f, 0f, h.toFloat(), 0f, borderStartColor, borderEndColor, Shader.TileMode.CLAMP
                 )
             }
             TYPE_TILT -> {
-                paint.shader = LinearGradient(
+                borderPaint.shader = LinearGradient(
                     0f,
                     0f,
                     w.toFloat(),
@@ -84,16 +90,23 @@ class GradientBorderAndTranslateContentView(context: Context, attributeSet: Attr
     }
 
     override fun onDraw(canvas: Canvas?) {
-        canvas?.drawColor(contentColor)
         canvas?.drawRoundRect(
-            0f,
-            0f,
-            measuredWidth.toFloat(),
-            measuredHeight.toFloat(),
-            corners,
-            corners,
-            paint
+            borderStrokeWidth.toFloat()/2,
+            borderStrokeWidth.toFloat()/2,
+            measuredWidth -  borderStrokeWidth.toFloat()/2,
+            measuredHeight - borderStrokeWidth.toFloat()/2,
+            corners.toFloat(),
+            corners.toFloat(),
+            centerContentPaint
         )
-        super.onDraw(canvas)
+        canvas?.drawRoundRect(
+            borderStrokeWidth.toFloat()/2,
+            borderStrokeWidth.toFloat()/2,
+            measuredWidth -  borderStrokeWidth.toFloat()/2,
+            measuredHeight - borderStrokeWidth.toFloat()/2,
+            corners.toFloat(),
+            corners.toFloat(),
+            borderPaint
+        )
     }
 }
