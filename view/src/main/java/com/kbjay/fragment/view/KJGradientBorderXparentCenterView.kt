@@ -6,7 +6,7 @@ import android.graphics.Paint.ANTI_ALIAS_FLAG
 import android.util.AttributeSet
 import android.view.View
 
-class GradientBorderAndTranslateContentView(context: Context, attributeSet: AttributeSet) :
+class KJGradientBorderXparentCenterView(context: Context, attributeSet: AttributeSet) :
     View(context, attributeSet) {
 
     private var borderStartColor: Int
@@ -27,31 +27,31 @@ class GradientBorderAndTranslateContentView(context: Context, attributeSet: Attr
     init {
         val typedArray = context.obtainStyledAttributes(
             attributeSet,
-            R.styleable.GradientBorderAndTranslateContentView
+            R.styleable.KJGradientBorderXparentCenterView
         )
 
         contentColor =
-            typedArray.getColor(R.styleable.GradientBorderAndTranslateContentView_contentColor, -1)
+            typedArray.getColor(R.styleable.KJGradientBorderXparentCenterView_contentColor, -1)
         borderStartColor =
             typedArray.getColor(
-                R.styleable.GradientBorderAndTranslateContentView_borderStartColor,
+                R.styleable.KJGradientBorderXparentCenterView_borderStartColor,
                 -1
             )
         borderEndColor =
             typedArray.getColor(
-                R.styleable.GradientBorderAndTranslateContentView_borderEndColor,
+                R.styleable.KJGradientBorderXparentCenterView_borderEndColor,
                 -1
             )
         corners = typedArray.getDimensionPixelSize(
-            R.styleable.GradientBorderAndTranslateContentView_corners,
+            R.styleable.KJGradientBorderXparentCenterView_corners,
             0
         )
         borderStrokeWidth =
             typedArray.getDimensionPixelSize(
-                R.styleable.GradientBorderAndTranslateContentView_gradientWidth,
+                R.styleable.KJGradientBorderXparentCenterView_gradientWidth,
                 0
             )
-        type = typedArray.getInt(R.styleable.GradientBorderAndTranslateContentView_type, 0)
+        type = typedArray.getInt(R.styleable.KJGradientBorderXparentCenterView_type, 0)
 
         typedArray.recycle()
         borderPaint = Paint(ANTI_ALIAS_FLAG)

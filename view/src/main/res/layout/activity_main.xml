@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.kbjay.fragment.view.GradientBorderAndTranslateContentView
+    <com.kbjay.fragment.view.KJGradientBorderXparentCenterView
         android:layout_width="232dp"
         android:layout_height="92dp"
         android:layout_marginTop="100dp"
