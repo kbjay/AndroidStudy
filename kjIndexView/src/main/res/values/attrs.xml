@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KJIndexView">
+        <attr name="selected_drawable" format="reference"></attr>
+        <attr name="unSelected_drawable" format="reference"></attr>
+        <attr name="item_cap" format="dimension"></attr>
+    </declare-styleable>
+</resources>
