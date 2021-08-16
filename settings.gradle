@@ -1,3 +1,6 @@
+include ':kjroundcornerview'
+include ':room'
+include ':kjIndexView'
 include ':kjScrollerView'
 include ':kjGradientBorderXparentContentView'
 include ':decompile'
