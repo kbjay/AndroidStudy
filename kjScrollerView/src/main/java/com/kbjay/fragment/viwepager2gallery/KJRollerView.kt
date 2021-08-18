@@ -90,14 +90,13 @@ class KJRollerView : RelativeLayout {
                     val scaleFactor = (1 - scaleRate) * position + 1
                     view.scaleX = scaleFactor
                     view.scaleY = scaleFactor
-                    view.pivotX = pageWidth * (0.5f + 0.5f * -position)
                 } else {
                     // [0 ~ 1]
                     val scaleFactor = (scaleRate - 1) * position + 1
                     view.scaleX = scaleFactor
                     view.scaleY = scaleFactor
-                    view.pivotX = pageWidth * ((1 - position) * 0.5f)
                 }
+                view.pivotX = pageWidth * ((1 - position) * 0.5f)
             } else {
                 // (1 ~ +00)
                 view.pivotX = 0f
