@@ -1,5 +1,5 @@
 
-![效果gif](https://github.com/kbjay/KJImageCheckView/blob/master/result.gif)
+![效果gif](https://github.com/kbjay/AndroidStudy/blob/master/kjhorloadingview/src/pic/result.gif)
 
 # 使用
 1. 自定义属性如下:
