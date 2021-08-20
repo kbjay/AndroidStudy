@@ -1,3 +1,4 @@
+include ':kjhorloadingview'
 include ':kjroundcornerview'
 include ':room'
 include ':kjIndexView'
