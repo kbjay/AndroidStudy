@@ -1,5 +1,5 @@
 
-![效果gif](https://github.com/kbjay/AndroidStudy/blob/master/kjhorloadingview/src/pic/result.gif =200*300)
+![效果gif](https://github.com/kbjay/AndroidStudy/blob/master/kjhorloadingview/src/pic/result.gif=200*300)
 
 
 自定义属性如下:
